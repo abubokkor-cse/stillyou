@@ -1,0 +1,47 @@
+{
+  "name": "stillyou",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22 <25"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "db:setup": "tsx --env-file=.env.local scripts/setup-db.ts",
+    "gates": "tsx --env-file=.env.local scripts/check-youcam.ts",
+    "fixtures:download": "tsx scripts/download-samples.ts",
+    "test:live": "node scripts/check-browser.mjs --live",
+    "assets:live": "node scripts/prepare-live-ar.mjs",
+    "postinstall": "node scripts/prepare-live-ar.mjs",
+    "test:ar": "node scripts/make-ar-camera.mjs && node scripts/check-live-ar.mjs"
+  },
+  "dependencies": {
+    "@mediapipe/tasks-vision": "1.1.1",
+    "@neondatabase/serverless": "^1.2.0",
+    "@vercel/blob": "^2.8.2",
+    "lucide-react": "^0.468.0",
+    "next": "16.4.2",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "server-only": "^0.0.1",
+    "sharp": "^0.35.5",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^22.19.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "eslint": "^9.39.0",
+    "eslint-config-next": "16.4.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  }
+}

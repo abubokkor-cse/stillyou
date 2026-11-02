@@ -1,0 +1,15 @@
+{
+  "consentConfirmed": false,
+  "referenceType": "actual_wig",
+  "source": "fixtures/private/baseline.jpg",
+  "shortHairSource": "fixtures/private/short-hair.jpg",
+  "wigReferences": [
+    "fixtures/private/wig-1.jpg",
+    "fixtures/private/wig-2.jpg",
+    "fixtures/private/wig-3.jpg",
+    "fixtures/private/wig-4.jpg",
+    "fixtures/private/wig-5.jpg"
+  ],
+  "hatReference": "fixtures/private/hat.jpg",
+  "hatGender": "female"
+}
